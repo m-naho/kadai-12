@@ -1,0 +1,40 @@
+@use "sass:math";
+@use "sass:meta";
+
+// pxからremへの計算式
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+// 数値のみを取り出す
+@function strip-unit($number) {
+  @if meta.type-of($number) == "number" and not math.is-unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+  @return $number;
+}
+
+// フォントサイズ ÷ 画面幅 * 100vw の計算
+//記述例：font-size: vw(1250, 16) ;→ 16px ÷ 1250px × 100vw
+@function vw($window_width, $size) {
+  @return math.div($size, $window_width) * 100vw;
+}
+
+
+//記述例：font-size: vw-xl(16) ;→ 16px ÷ 1920px × 100vw
+@function vw-xl($size) {
+	@return math.div($size, 1920) * 100vw;
+}
+
+//記述例：font-size: vw-lg(16) ;→ 16px ÷ 1440px × 100vw
+@function vw-lg($size) {
+	@return math.div($size, 1440) * 100vw;
+}
+
+@function vw-m($size) {
+	@return math.div($size, 768) * 100vw;
+}
+
+@function vw-s($size) {
+	@return math.div($size,375) * 100vw;
+}

@@ -1,0 +1,323 @@
+@use "global" as *;
+.p-fv {
+  // margin-top: rem(60);
+  // @include mq(md) {
+  //   margin-top: rem(70);
+  // }
+}
+
+.p-fv__inner {
+  position: relative;
+  display: flex;
+}
+
+.p-fv__image {
+  width: 100%;
+  height: rem(515);
+  @include mq(md) {
+    height: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.p-fv__content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 10;
+  @include mq(md) {
+    top: rem(70);
+  }
+}
+
+.p-fv__reserve-circle {
+  width: rem(140);
+  height: rem(45);
+  background-color: $orange;
+  color: $white;
+  font-size: rem(14);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  border: rem(2) solid $white;
+  border-radius: rem(20);
+  position: fixed;
+  top: rem(-5);
+  right: rem(15);
+  display: none;
+  @include mq(md) {
+    width: rem(230);
+    height: rem(55);
+    font-size: rem(20);
+    border-radius: rem(25);
+  }
+}
+
+.p-fv__circle-link {
+  position: relative;
+  padding-inline: 0 rem(15);
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    // 外側の丸
+    content: "";
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(15);
+    height: rem(15);
+    background-color: $white;
+    border-radius: 50%;
+    @include mq(md) {
+      width: rem(25);
+      height: rem(25);
+      right: -7%;
+    }
+  }
+
+  &::after {
+    // 中の三角
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    // 三角形の作り方
+    border-style: solid;
+    border-width: rem(4) 0 rem(4) rem(6);
+    border-color: transparent transparent transparent $orange;
+    @include mq(md) {
+      right: -2%;
+      border-width: rem(6) 0 rem(6) rem(8);
+    }
+  }
+}
+
+.p-fv__span {
+  width: rem(1);
+  height: rem(30);
+  background-color: $blue;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  @include mq(md) {
+    width: rem(2);
+    height: rem(60);
+    top: 7%;
+  }
+}
+
+.p-fv__text {
+  font-size: rem(40);
+  font-family: Holland, sans-serif;
+  letter-spacing: 0.075em;
+  color: rgba($color: #1e588f, $alpha: 0.6);
+  position: absolute;
+  top: 14%;
+  right: 2%;
+  transform: rotate(-15deg);
+  @include mq(md) {
+    font-size: rem(96);
+    top: 20%;
+    right: 3%;
+  }
+}
+
+.p-fv__title {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  @include mq(md) {
+    top: 17%;
+  }
+}
+
+.p-fv__sub-title {
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  color: $blue;
+  @include mq(md) {
+    font-size: rem(38);
+  }
+}
+
+.p-fv__main-title {
+  font-size: rem(34);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  width: auto;
+  white-space: nowrap;
+  @include mq(md) {
+    font-size: rem(68);
+  }
+}
+
+.p-fv__feature-list {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: rem(10);
+  @include mq(md) {
+    top: 42%;
+    gap: rem(30);
+  }
+}
+
+.p-fv__feature-item {
+}
+
+.p-fv__feature-bg {
+}
+
+.p-fv__feature-text {
+}
+
+.p-fv__reserve-square {
+  width: rem(100);
+  height: rem(80);
+  background-color: $orange;
+  border: rem(2) solid $white;
+  border-radius: rem(10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 68%;
+  right: 1%;
+  @include mq(md) {
+    width: rem(210);
+    height: rem(170);
+    top: 57%;
+    right: 1%;
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.p-fv__button-icon {
+  width: rem(45);
+  height: auto;
+  @include mq(md) {
+    width: rem(90);
+    height: auto;
+    margin-top: rem(30);
+  }
+}
+
+.p-fv__square-link {
+  font-size: rem(11);
+  font-weight: 700;
+  color: $white;
+  position: relative;
+  padding-right: rem(15);
+  @include mq(md) {
+    font-size: rem(20);
+    margin-bottom: rem(20);
+  }
+
+  &::before {
+    // 外側の丸
+    content: "";
+    position: absolute;
+    width: rem(12);
+    height: rem(12);
+    background-color: $white;
+    border-radius: 50%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include mq(md) {
+      right: -7%;
+      width: rem(25);
+      height: rem(25);
+    }
+  }
+
+  &::after {
+    // 中の三角
+    content: "";
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    // 三角形の作り方
+    border-style: solid;
+    border-width: rem(4) 0 rem(4) rem(6);
+    border-color: transparent transparent transparent $orange;
+    @include mq(md) {
+      right: -2%;
+      border-width: rem(6) 0 rem(6) rem(8);
+    }
+  }
+}
+
+.p-fv__button-black {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq(md) {
+    top: 82%;
+    width: rem(420);
+    height: rem(75);
+  }
+}
+
+.p-fv__black-link {
+  &::before {
+    width: rem(12);
+    height: rem(12);
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    // 三角形の作り方
+    border-style: solid;
+    border-width: rem(4) 0 rem(4) rem(6);
+    border-color: transparent transparent transparent $black;
+  }
+  @include mq(md) {
+    font-size: rem(22);
+
+    &::before {
+      width: rem(8);
+      height: rem(8);
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include mq(md) {
+        width: rem(25);
+        height: rem(25);
+      }
+    }
+
+    &::after {
+      right: 10%;
+      top: 50%;
+    }
+  }
+}

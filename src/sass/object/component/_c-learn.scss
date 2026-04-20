@@ -1,0 +1,30 @@
+@use "global" as *;
+.c-learn__list {
+
+}
+
+.c-learn__item {
+  display: flex;
+  background-color: rgba($color: #489de1, $alpha: 0.3);
+  align-items: center;
+  padding: rem(20); 
+  gap: rem(15);
+  border-radius: rem(8);
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.c-learn__img {
+  width: rem(101);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.c-learn__text {
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: calc(25 / 18);
+  text-align: center;
+}
+

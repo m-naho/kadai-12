@@ -1,0 +1,27 @@
+@use "global" as *;
+.c-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.c-title__en {
+  font-family: $font-sub;
+  font-size: rem(12);
+  font-weight: 700;
+  color: $blue;
+  letter-spacing: 0.075em;
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.c-titile__ja {
+  font-size: rem(24);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  @include mq(md) {
+    font-size: rem(42);
+  }
+}
+

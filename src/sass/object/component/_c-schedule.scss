@@ -1,0 +1,74 @@
+@use "global" as *;
+.c-schedule__list {
+  display: flex;
+  background-color: #e6eef6;
+}
+
+.c-schedule__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-schedule__date {
+  width: 30%;
+}
+
+.c-schedule__day {
+  font-size: rem(16);
+  font-weight: 700;
+  display: block;
+  color: $white;
+  background-color: #2a6eae;
+  padding: rem(50) rem(10);
+  text-align: center;
+}
+
+.c-schedule__time {
+  font-size: rem(16);
+  font-weight: 700;
+  display: block;
+  color: $white;
+  background-color: #6096c8;
+  padding: rem(40) rem(10);
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.c-schedule__content {
+  width: 70%;
+}
+
+.c-schedule__title {
+
+}
+
+.c-schedule__text {
+
+}
+
+.c-schedule__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-schedule__btn-blue {
+  font-size: rem(16);
+  letter-spacing: 0.075em;
+  display: block;
+  color: $white;
+  background-color: #2a6eae;
+  padding: rem(15) rem(30);
+  border-radius: rem(40);
+}
+
+.c-schedule__btn-black {
+  font-size: rem(16);
+  letter-spacing: 0.075em;
+  display: block;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  padding: rem(15) rem(30);
+  border-radius: rem(40);
+}

@@ -1,0 +1,99 @@
+@use "sass:math";
+@use "sass:map";
+
+// インナー幅
+$innerWidth: 1000px;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 30px;
+
+// フォント
+$font-main: "Noto Sans JP", sans-serif;
+$font-sub: "Lato", sans-serif;
+
+// 色指定
+$black: #000;
+$white: #fff;
+$orange: #ef7000;
+$yellow: #f7fe2f;
+$blue: #1e588f;
+$skyblue: #489de1;
+$skyblue2: #558dc4;
+
+// フォントウェイト
+$font-weights: (
+  normal: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+);
+
+// ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+// メディアクエリ mixin
+// 使い方: @include mq(sm) {} / @include mq(md) {} など
+// 引数なしの場合はデフォルトで md (768px以上) が適用される
+@mixin mq($breakpoint: md) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+    @media screen and (min-width: #{$value}px) {
+      @content;
+    }
+  } @else {
+    @warn "無効なブレイクポイントです: #{$breakpoint}。有効な値: #{map.keys($breakpoints)}";
+  }
+}
+
+// line-height
+@mixin l_height($pixels, $height) {
+  font-size: $pixels * 1px;
+  line-height: $height / $pixels;
+}
+
+@mixin f_around($pixels, $height: false, $weight: false, $spacing: false) {
+  font-size: $pixels * 1px;
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $height {
+    line-height: $height / $pixels;
+  }
+
+  @if $spacing {
+    letter-spacing: ($spacing / 1000) * 1em;
+  }
+}
+
+// 呼び出し例
+// ＠include f_around(フォントサイズ18px, 行送り30 , 太さW6, トラッキング200)
+
+$z-index-values: (
+  "modal": 1000,
+  "dropdown": 900,
+  "tooltip": 800,
+  "overlay": 700,
+  "header": 600,
+  "sidebar": 500,
+);
+
+@mixin set-z-index($element) {
+  @if map-has-key($z-index-values, $element) {
+    z-index: map-get($z-index-values, $element);
+  } @else {
+    @warn "無効なz-index要素です: #{$element}";
+  }
+}
+
+// 使用例:
+// .my-modal {
+//   @include set-z-index("modal");
+// }

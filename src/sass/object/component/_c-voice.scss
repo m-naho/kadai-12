@@ -1,0 +1,46 @@
+@use "global" as *;
+.c-voice__card {
+  width: rem(212);
+  height: rem(352);
+  position: relative;
+}
+
+.c-voice__img {
+  width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.c-voice__id {
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0, 075em;
+  color: $white;
+  background-color: $blue;
+  padding: rem(10) rem(20);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.c-voice__content {
+  width: 100%;
+  background-color: rgba($color: $skyblue2, $alpha: 0.2);
+}
+
+.c-voice__job {
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+}
+
+.c-voice__text {
+  font-size: rem(19);
+  letter-spacing: 0.075em;
+  margin-top: rem(17);
+}

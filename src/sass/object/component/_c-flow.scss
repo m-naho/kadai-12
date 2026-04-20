@@ -1,0 +1,72 @@
+@use "global" as *;
+.c-flow__list {
+}
+
+.c-flow__item {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+
+.c-flow__icon-base {
+  width: rem(220);
+  height: rem(220);
+  background-color: rgba($color: #e6eef6, $alpha: 1);
+  border-radius: 50%;
+  position: relative;
+}
+
+.c-flow__icon img {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: rem(90);
+  height: rem(138);
+
+}
+
+.c-flow__item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-flow__item-label {
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  color: $blue;
+  position: relative;
+  display: inline-block;
+  padding-bottom: rem(12);
+  @include mq(md) {
+    font-size: rem(22);
+    display: block;
+    text-align: center;
+  }
+}
+
+.c-flow__item-label::after {
+  content: "";
+  width: rem(30);
+  height: rem(1);
+  background-color: $blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include mq(md) {
+    display: block;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.c-flow__item-text {
+  font-size: rem(14);
+  letter-spacing: 0.075em;
+  margin-top: rem(16);
+}
