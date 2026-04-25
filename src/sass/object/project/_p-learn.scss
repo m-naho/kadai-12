@@ -1,0 +1,90 @@
+@use "global" as *;
+.p-learn {
+  margin-top: rem(65);
+}
+
+.c-title {
+
+}
+
+.p-learn__title {
+
+}
+
+.c-title__en {
+
+}
+
+.c-titile__ja {
+
+}
+
+.p-learn__inner {
+  padding-inline: rem(15);
+  display: flex;
+  flex-direction: column;
+}
+
+.c-learn__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.c-learn__item {
+
+}
+
+.c-learn__img {
+
+}
+
+.c-learn__text {
+
+}
+
+.p-learn__text {
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  color: $blue;
+  margin-top: rem(30);
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translateY(-50%);
+    width: rem(33);
+    height: rem(88);
+    background-image: url("../images/learning5.jpg");
+    background-size: contain;
+    background-repeat: no-repeat
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+    width: rem(33);
+    height: rem(88);
+    background-image: url("../images/learning6.jpg");
+    background-size: contain;
+    background-repeat: no-repeat
+  }
+}
+
+.p-learn__text span {
+  font-family: NotoSerifCJKjp serif;
+  font-size: rem(35);
+  letter-spacing: 0.075em;
+  color: $blue;
+}
+
+
+

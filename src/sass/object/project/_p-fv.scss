@@ -1,42 +1,61 @@
 @use "global" as *;
 .p-fv {
-  // margin-top: rem(60);
-  // @include mq(md) {
-  //   margin-top: rem(70);
-  // }
+  position: relative;
+  width: 100%;
+}
+
+.p-fv__picture {
+  width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
 }
 
 .p-fv__inner {
-  position: relative;
+  position: absolute;
   display: flex;
+  top: rem(60);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  z-index: 10;
+
+  @include mq(md) {
+    max-width: 1440px;
+  }
 }
 
 .p-fv__image {
   width: 100%;
   height: rem(515);
+  display: block;
+  aspect-ratio: 375 / 515;
+  object-fit: cover;
   @include mq(md) {
-    height: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 680;
+    max-height: 680px;
   }
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center bottom;
   }
 }
 
 .p-fv__content {
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   height: 100%;
   text-align: center;
   z-index: 10;
-  @include mq(md) {
-    top: rem(70);
-  }
 }
 
 .p-fv__reserve-circle {
@@ -50,8 +69,8 @@
   border: rem(2) solid $white;
   border-radius: rem(20);
   position: fixed;
-  top: rem(-5);
-  right: rem(15);
+  top: rem(10);
+  right: rem(10);
   display: none;
   @include mq(md) {
     width: rem(230);
@@ -71,7 +90,7 @@
     // 外側の丸
     content: "";
     position: absolute;
-    right: -2%;
+    right: rem(-3);
     top: 50%;
     transform: translateY(-50%);
     width: rem(15);
@@ -108,12 +127,12 @@
   height: rem(30);
   background-color: $blue;
   position: absolute;
-  top: 20%;
+  top: -10%;
   left: 50%;
   @include mq(md) {
     width: rem(2);
     height: rem(60);
-    top: 7%;
+    top: 0;
   }
 }
 
@@ -123,28 +142,46 @@
   letter-spacing: 0.075em;
   color: rgba($color: #1e588f, $alpha: 0.6);
   position: absolute;
-  top: 14%;
-  right: 2%;
+  top: rem(55);
+  right: rem(5);
   transform: rotate(-15deg);
   @include mq(md) {
-    font-size: rem(96);
-    top: 20%;
-    right: 3%;
+    font-size: 7vw;
+    top: rem(150);
+    right: rem(35);
+  }
+}
+
+.p-fv__body {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  @include mq(md) {
+    top: 50%;
   }
 }
 
 .p-fv__title {
-  position: absolute;
-  top: 27%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%;
+  margin-bottom: rem(15);
   @include mq(md) {
-    top: 17%;
+    margin-top: 6vh;
   }
 }
 
@@ -170,14 +207,16 @@
 }
 
 .p-fv__feature-list {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: auto;
+  left: auto;
+  display: flex;
+  justify-content: center;
   gap: rem(10);
+  // margin-top: rem(5);
   @include mq(md) {
-    top: 42%;
-    gap: rem(30);
+    margin-bottom: rem(20);
+    gap: rem(20);
   }
 }
 
@@ -201,8 +240,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 68%;
-  right: 1%;
+  top: rem(340);
+  right: rem(3);
   @include mq(md) {
     width: rem(210);
     height: rem(170);
@@ -270,12 +309,12 @@
 }
 
 .p-fv__button-black {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin-block: rem(120) 0;
+  margin-inline: auto;
   @include mq(md) {
-    top: 82%;
+    margin: rem(45) auto 0;
+    top: 0;
     width: rem(420);
     height: rem(75);
   }

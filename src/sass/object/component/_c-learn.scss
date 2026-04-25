@@ -1,30 +1,37 @@
 @use "global" as *;
 .c-learn__list {
-
 }
 
 .c-learn__item {
   display: flex;
-  background-color: rgba($color: #489de1, $alpha: 0.3);
+  background-color: rgba($color: #489de1, $alpha: 0.2);
   align-items: center;
-  padding: rem(20); 
-  gap: rem(15);
+  padding: rem(20);
+  gap: rem(10);
   border-radius: rem(8);
   @include mq(md) {
     flex-direction: column;
   }
 }
 
+.c-learn__img-wrapper {
+  width: rem(100);
+  height: rem(70);
+}
+
 .c-learn__img {
-  width: rem(101);
+  width: 100%;
   height: auto;
-  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
 }
 
 .c-learn__text {
   font-size: rem(18);
   font-weight: 700;
   line-height: calc(25 / 18);
+  text-align: center;
+  white-space: nowrap;
   text-align: center;
 }
 
