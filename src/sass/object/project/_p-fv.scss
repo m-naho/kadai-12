@@ -14,11 +14,11 @@
 .p-fv__inner {
   position: absolute;
   display: flex;
-  top: rem(60);
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 500px;
+  // max-width: 500px;
   height: 100%;
   z-index: 10;
 
@@ -29,12 +29,12 @@
 
 .p-fv__image {
   width: 100%;
-  height: rem(515);
+  height: calc(1025 / 750 * 100vw);
+
   display: block;
   aspect-ratio: 375 / 515;
   object-fit: cover;
   @include mq(md) {
-    // height: auto;
     height: rem(680);
     aspect-ratio: 1440 / 680;
     // max-height: 680px;
@@ -60,30 +60,32 @@
 }
 
 .p-fv__reserve-circle {
-  width: rem(140);
-  height: rem(45);
+  width: calc(280 / 750 * 100vw);
+  height: calc(80 / 750 * 100vw);
   background-color: $orange;
   color: $white;
-  font-size: rem(14);
+  font-size: calc(28 / 750 * 100vw);
   font-weight: 700;
   letter-spacing: 0.075em;
   border: rem(2) solid $white;
-  border-radius: rem(20);
+  border-radius: calc(40 / 750 * 100vw);
   position: fixed;
-  top: rem(10);
-  right: rem(10);
-  display: none;
+  top: calc(130 / 750 * 100vw);
+  right: calc(35 / 750 * 100vw);
+  // display: none;
   @include mq(md) {
     width: rem(230);
     height: rem(55);
     font-size: rem(20);
     border-radius: rem(25);
+    top: rem(90);
+    right: rem(10);
   }
 }
 
 .p-fv__circle-link {
   position: relative;
-  padding-inline: 0 rem(15);
+  padding-inline: 0 rem(20);
   width: 100%;
   height: 100%;
 
@@ -91,11 +93,11 @@
     // 外側の丸
     content: "";
     position: absolute;
-    right: rem(-3);
+    right: calc(-10 / 750 * 100vw);
     top: 50%;
     transform: translateY(-50%);
-    width: rem(15);
-    height: rem(15);
+    width: calc(30 / 750 * 100vw);
+    height: calc(30 / 750 * 100vw);
     background-color: $white;
     border-radius: 50%;
     @include mq(md) {
@@ -114,7 +116,7 @@
     transform: translateY(-50%);
     // 三角形の作り方
     border-style: solid;
-    border-width: rem(4) 0 rem(4) rem(6);
+    border-width: rem(6) 0 rem(6) rem(8);
     border-color: transparent transparent transparent $orange;
     @include mq(md) {
       right: -2%;
@@ -123,28 +125,14 @@
   }
 }
 
-.p-fv__span {
-  width: rem(1);
-  height: rem(30);
-  background-color: $blue;
-  position: absolute;
-  top: -10%;
-  left: 50%;
-  @include mq(md) {
-    width: rem(2);
-    height: rem(60);
-    top: 0;
-  }
-}
-
 .p-fv__text {
-  font-size: rem(40);
+  font-size: calc(80 / 750 * 100vw);
   font-family: Holland, sans-serif;
   letter-spacing: 0.075em;
   color: rgba($color: #1e588f, $alpha: 0.6);
   position: absolute;
-  top: rem(55);
-  right: rem(5);
+  top: calc(250 / 750 * 100vw);
+  right: calc(30 / 750 * 100vw);
   transform: rotate(-15deg);
   @include mq(md) {
     font-size: 7vw;
@@ -155,18 +143,34 @@
 
 .p-fv__body {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 20;
+  // @include mq(md) {
+
+  // }
+}
+
+.p-fv__span {
+  width: calc(1 / 750 * 100vw);
+  height: calc(60 / 750 * 100vw);
+  background-color: $blue;
+  display: block;
+  top: calc(300 / 750 * 100vw);
+  left: 50%;
+  margin-bottom: calc(20 / 750 * 100vw);
   @include mq(md) {
-    top: 50%;
+    width: rem(2);
+    height: rem(60);
+    position: absolute;
+    top: 15%;
+    margin-bottom: 0;
   }
 }
 
@@ -180,31 +184,34 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  margin-bottom: rem(15);
+  // margin-bottom:;
   @include mq(md) {
     margin-top: 6vh;
   }
 }
 
 .p-fv__sub-title {
-  font-size: rem(19);
+  // font-size: calc(38 / 750 * 100vw);
+  font-size: clamp(rem(18), calc(38 / 750 * 100vw), rem(38));
   font-weight: 700;
   letter-spacing: 0.075em;
   color: $blue;
-  @include mq(md) {
-    font-size: rem(38);
-  }
+  // @include mq(md) {
+  //   // font-size: rem(38);
+  // }
 }
 
 .p-fv__main-title {
-  font-size: rem(34);
+  // font-size: calc(68 / 750 * 100vw);
+  font-size: clamp(rem(34), calc(68 / 750 * 100vw), rem(68));
   font-weight: 700;
   letter-spacing: 0.075em;
   width: auto;
-  white-space: nowrap;
-  @include mq(md) {
-    font-size: rem(68);
-  }
+  // white-space: nowrap;
+  //   @include mq(md) {
+  //     // font-size: rem(68);
+  //   }
+  //
 }
 
 .p-fv__feature-list {
@@ -231,8 +238,8 @@
 }
 
 .p-fv__reserve-square {
-  width: rem(100);
-  height: rem(80);
+  width: calc(195 / 750 * 100vw);
+  height: calc(156 / 750 * 100vw);
   background-color: $orange;
   border: rem(2) solid $white;
   border-radius: rem(10);
@@ -241,8 +248,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: rem(340);
-  right: rem(3);
+  bottom: calc(74 / 750 * 100vw);
+  right: calc(6 / 750 * 100vw);
   @include mq(md) {
     width: rem(210);
     height: rem(170);
@@ -253,7 +260,7 @@
 }
 
 .p-fv__button-icon {
-  width: rem(45);
+  width: calc(90 / 750 * 100vw);
   height: auto;
   @include mq(md) {
     width: rem(90);
@@ -263,11 +270,11 @@
 }
 
 .p-fv__square-link {
-  font-size: rem(11);
+  font-size: calc(22 / 750 * 100vw);
   font-weight: 700;
   color: $white;
   position: relative;
-  padding-right: rem(15);
+  padding-right: calc(30 / 750 * 100vw);
   @include mq(md) {
     font-size: rem(20);
     margin-bottom: rem(20);
@@ -277,8 +284,8 @@
     // 外側の丸
     content: "";
     position: absolute;
-    width: rem(12);
-    height: rem(12);
+    width: calc(25 / 750 * 100vw);
+    height: calc(25 / 750 * 100vw);
     background-color: $white;
     border-radius: 50%;
     right: 0;
@@ -295,12 +302,12 @@
     // 中の三角
     content: "";
     position: absolute;
-    right: 2%;
+    right: calc(6 / 750 * 100vw);
     top: 50%;
     transform: translateY(-50%);
     // 三角形の作り方
     border-style: solid;
-    border-width: rem(4) 0 rem(4) rem(6);
+    border-width: rem(6) 0 rem(6) rem(8);
     border-color: transparent transparent transparent $orange;
     @include mq(md) {
       right: -2%;
@@ -310,13 +317,58 @@
 }
 
 .p-fv__button-black {
-  position: relative;
-  margin-block: rem(120) 0;
-  margin-inline: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: calc(480 / 750 * 100vw);
+  height: calc(100 / 750 * 100vw);
   @include mq(md) {
-    margin: rem(45) auto 0;
-    top: 0;
+    // margin: rem(45) auto 0;
+    // top: 0;
     width: rem(420);
     height: rem(75);
+  }
+}
+
+.p-fv__black-link {
+  font-size: calc(28 / 750 * 100vw);
+  @include mq(md) {
+    font-size: rem(22);
+  }
+
+  &::before {
+    // 外側の丸
+    content: "";
+    position: absolute;
+    width: calc(25 / 750 * 100vw);
+    height: calc(25 / 750 * 100vw);
+    background-color: $white;
+    border-radius: 50%;
+    right: calc(20 / 750 * 100vw);
+    top: 50%;
+    transform: translateY(-50%);
+    @include mq(md) {
+      right: 7%;
+      width: rem(25);
+      height: rem(25);
+    }
+  }
+
+  &::after {
+    // 中の三角
+    content: "";
+    position: absolute;
+    right: calc(25 / 750 * 100vw);
+    top: 50%;
+    transform: translateY(-50%);
+    // 三角形の作り方
+    border-style: solid;
+    border-width: rem(6) 0 rem(6) rem(8);
+    border-color: transparent transparent transparent $black;
+    @include mq(md) {
+      right: 9%;
+      border-width: rem(6) 0 rem(6) rem(8);
+    }
   }
 }

@@ -7,8 +7,8 @@
 }
 
 .p-fv__feature-bg {
-  width: rem(100);
-  height: rem(100);
+  width: calc(200 / 750 * 100vw);
+  height: calc(200 / 750 * 100vw);
   background-color: $blue;
   border-radius: 50%;
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 .p-fv__feature-text {
-  font-size: rem(13);
+  font-size: calc(25 / 750 * 100vw);
   font-weight: 700;
   letter-spacing: 0.075em;
   color: $white;

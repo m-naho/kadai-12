@@ -1,0 +1,241 @@
+@use "global" as *;
+.p-participant {
+  margin-top: rem(40);
+}
+
+.l-inner {
+}
+
+.c-title {
+}
+
+.p-participant__title {
+  margin: 0 auto;
+}
+
+.c-title__en {
+}
+
+.c-title__ja {
+}
+
+.p-participant__title-ja {
+  padding-inline: 0;
+  white-space: nowrap;
+}
+
+.p-participant__wrapper {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(35);
+  }
+}
+
+.p-participant__chart-container {
+  position: relative;
+  margin-top: rem(40);
+}
+
+.p-participant__pie-chart {
+  width: rem(240);
+  height: rem(240);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  background: conic-gradient(
+    rgba(187, 208, 228, 1) 0% 8%,
+    rgba(235, 175, 123, 1) 8% 62%,
+    rgba(187, 208, 228, 1) 62% 92%,
+    rgba(230, 236, 246, 1) 92% 100%
+  );
+}
+
+.p-participant__center {
+  width: rem(120);
+  height: rem(120);
+  border-radius: 50%;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chart__center-text {
+  color: $blue;
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+}
+
+.chart__label-age {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  text-align: center;
+}
+
+.chart__label-30 {
+  font-size: rem(17);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $orange,
+    -1px 1px 0 $orange,
+    1px -1px 0 $orange,
+    -1px -1px 0 $orange;
+}
+
+.chart__label-bottom {
+  font-size: rem(29);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $orange,
+    -1px 1px 0 $orange,
+    1px -1px 0 $orange,
+    -1px -1px 0 $orange;
+}
+
+.chart__label-age2 {
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  text-align: center;
+}
+
+.chart__label-40 {
+  font-size: rem(17);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $blue,
+    -1px 1px 0 $blue,
+    1px -1px 0 $blue,
+    -1px -1px 0 $blue;
+}
+
+.chart__label-bottom2 {
+  font-size: rem(29);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $blue,
+    -1px 1px 0 $blue,
+    1px -1px 0 $blue,
+    -1px -1px 0 $blue;
+}
+
+.p-participant__text {
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-align: center;
+  margin-top: rem(10);
+}
+
+.p-participant__pie-chart2 {
+  width: rem(240);
+  height: rem(240);
+  border-radius: 50%;
+  margin: rem(40) auto 0;
+  position: relative;
+  background: conic-gradient(
+    rgba(187, 208, 228, 1) 0% 33%,
+    rgba(235, 175, 123, 1) 33% 66%,
+    rgba(187, 208, 228, 1) 66% 85%,
+    rgba(230, 238, 246, 1) 85% 100%
+  );
+}
+
+.p-participant__center2 {
+  width: rem(120);
+  height: rem(120);
+  border-radius: 50%;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chart__center-text2 {
+  color: $blue;
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+}
+
+.chart__label-income {
+  position: absolute;
+  top: 70%;
+  right: 20%;
+  text-align: center;
+}
+
+.chart__label-600 {
+  font-size: rem(17);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $orange,
+    -1px 1px 0 $orange,
+    1px -1px 0 $orange,
+    -1px -1px 0 $orange;
+}
+
+.chart__label-bottom3 {
+  font-size: rem(29);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $orange,
+    -1px 1px 0 $orange,
+    1px -1px 0 $orange,
+    -1px -1px 0 $orange;
+}
+
+.chart__label-income2 {
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  text-align: center;
+}
+
+.chart__label-800 {
+  font-size: rem(17);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $blue,
+    -1px 1px 0 $blue,
+    1px -1px 0 $blue,
+    -1px -1px 0 $blue;
+}
+
+.chart__label-bottom4 {
+  font-size: rem(29);
+  font-weight: 700;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $blue,
+    -1px 1px 0 $blue,
+    1px -1px 0 $blue,
+    -1px -1px 0 $blue;
+}
+
+.p-participant__text2 {
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-align: center;
+  margin-top: rem(10);
+}
