@@ -45,4 +45,26 @@
     border-width: rem(5) 0 rem(5) rem(8);
     border-color: transparent transparent transparent $black;
   }
+
+  @include mq(md) {
+    font-size: rem(22);
+
+    &::before {
+      width: rem(8);
+      height: rem(8);
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include mq(md) {
+        width: rem(25);
+        height: rem(25);
+      }
+    }
+
+    &::after {
+      right: 10%;
+      top: 50%;
+    }
+  }
 }

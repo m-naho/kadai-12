@@ -34,9 +34,10 @@
   aspect-ratio: 375 / 515;
   object-fit: cover;
   @include mq(md) {
-    height: auto;
+    // height: auto;
+    height: rem(680);
     aspect-ratio: 1440 / 680;
-    max-height: 680px;
+    // max-height: 680px;
   }
 
   img {
@@ -317,46 +318,5 @@
     top: 0;
     width: rem(420);
     height: rem(75);
-  }
-}
-
-.p-fv__black-link {
-  &::before {
-    width: rem(12);
-    height: rem(12);
-    right: 4%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &::after {
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    // 三角形の作り方
-    border-style: solid;
-    border-width: rem(4) 0 rem(4) rem(6);
-    border-color: transparent transparent transparent $black;
-  }
-  @include mq(md) {
-    font-size: rem(22);
-
-    &::before {
-      width: rem(8);
-      height: rem(8);
-      right: 8%;
-      top: 50%;
-      transform: translateY(-50%);
-
-      @include mq(md) {
-        width: rem(25);
-        height: rem(25);
-      }
-    }
-
-    &::after {
-      right: 10%;
-      top: 50%;
-    }
   }
 }

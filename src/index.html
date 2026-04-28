@@ -32,6 +32,12 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.min.css" />
     <!-- JavaScript -->
@@ -173,7 +179,7 @@
         <div class="l-inner">
           <h2 class="c-title p-learn__title">
             <span class="c-title__en" aria-hidden="true">You can learn</span>
-            <span class="c-titile__ja">セミナーで学べること</span>
+            <span class="c-title__ja">セミナーで学べること</span>
           </h2>
         </div>
         <div class="p-learn__inner">
@@ -211,10 +217,54 @@
               </h3>
             </li>
           </ul>
-          <p class="p-learn__text">
-            参加者満足度<span>95%</span>以上<br />
-            人気セミナーです！
-          </p>
+          <div class="p-learn__text-wrapper">
+            <p class="p-learn__text-top">
+              参加者満足度<span class="p-learn__span-before">95</span
+              ><span class="p-learn__span-after">%</span>以上
+            </p>
+            <p class="p-learn__text-bottom">人気セミナーです！</p>
+          </div>
+        </div>
+        <div class="p-learn__banner">
+          <div class="p-learn__bg-area">
+            <picture class="p-learn__banner-item">
+              <source
+                srcset="./images/banner-pc.png"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="./images/banner.png"
+                alt=""
+                class="p-learn__banner-img"
+              />
+            </picture>
+
+            <picture class="p-learn__banner-item">
+              <source
+                srcset="./images/banner-pc2.jpg"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="./images/banner2.jpg"
+                alt=""
+                class="p-learn__banner-img"
+              />
+            </picture>
+          </div>
+
+          <div class="p-learn__banner-wrapper">
+            <div class="p-learn__content">
+              <p class="p-learn__banner-text">
+                参加者全員に「不動産投資ガイド」
+              </p>
+              <p class="p-learn__banner-yellow">無料プレゼント！</p>
+            </div>
+            <button class="c-button__black p-learn__black">
+              <a href="#" class="c-button__black-link"
+                >無料セミナー日程を確認する</a
+              >
+            </button>
+          </div>
         </div>
       </section>
     </main>
