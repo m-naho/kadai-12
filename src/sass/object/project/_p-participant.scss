@@ -29,7 +29,9 @@
   flex-direction: column;
   @include mq(md) {
     flex-direction: row;
-    gap: rem(35);
+    gap: rem(65);
+    justify-content: center;
+    max-width: rem(730);
   }
 }
 
@@ -139,11 +141,15 @@
   margin-top: rem(10);
 }
 
+.p-participant__chart-container2 {
+  margin-top: rem(40);
+}
+
 .p-participant__pie-chart2 {
   width: rem(240);
   height: rem(240);
+  margin: 0 auto;
   border-radius: 50%;
-  margin: rem(40) auto 0;
   position: relative;
   background: conic-gradient(
     rgba(187, 208, 228, 1) 0% 33%,
@@ -151,6 +157,7 @@
     rgba(187, 208, 228, 1) 66% 85%,
     rgba(230, 238, 246, 1) 85% 100%
   );
+  align-items: center;
 }
 
 .p-participant__center2 {
