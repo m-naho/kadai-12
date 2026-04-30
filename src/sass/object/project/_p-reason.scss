@@ -145,7 +145,7 @@
   height: auto;
   position: relative;
   z-index: 2;
-  margin-top: rem(-100);
+  margin-top: rem(-50);
   margin-left: rem(20);
   @include mq(md) {
     width: calc(360 / 1440 * 100vw);
@@ -176,7 +176,7 @@
   height: auto;
   position: relative;
   z-index: 2;
-  margin-top: rem(-100);
+  margin-top: rem(-50);
   margin-left: rem(40);
   @include mq(md) {
     width: calc(360 / 1440 * 100vw);

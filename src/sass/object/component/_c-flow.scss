@@ -11,22 +11,34 @@
   }
 }
 
-
 .c-flow__icon-base {
-  width: rem(220);
-  height: rem(220);
+  width: calc(220 / 750 * 100vw);
+  height: calc(220 / 750 * 100vw);
   background-color: rgba($color: #e6eef6, $alpha: 1);
   border-radius: 50%;
   position: relative;
+  @include mq(md) {
+    width: calc(100 / 750 * 100vw);
+    height: calc(100 / 750 * 100vw);
+  }
 }
 
-.c-flow__icon img {
+.c-flow__icon-img {
   position: absolute;
   top: 25%;
   left: 25%;
-  width: rem(90);
-  height: rem(138);
+  width: calc(120 / 750 * 100vw);
+  height: calc(120 / 750 * 100vw);
+  @include mq(md) {
+    width: calc(55 / 750 * 100vw);
+    height: calc(55 / 750 * 100vw);
+  }
+}
 
+.c-flow__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .c-flow__item-container {
