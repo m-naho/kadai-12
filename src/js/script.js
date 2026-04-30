@@ -58,11 +58,10 @@ window.addEventListener("DOMContentLoaded", () => {
       // 修正ポイント：$(".js-swiper") ではなく ".js-swiper" (文字列) を渡す
       const swiper = new Swiper(".js-swiper", {
         loop: true,
-        speed: 6000, // まずは動いているか分かりやすい速度で
+        speed: 6000, 
         allowTouchMove: false,
-        slidesPerView: 1.8, // スマホで少し次が見えるくらい
+        slidesPerView: 1.8, 
         spaceBetween: 20,
-        // PC版の設定（任意で調整してください）
         autoplay: {
           delay: 0,
           disableOnInteraction: false,

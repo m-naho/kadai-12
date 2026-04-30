@@ -1,0 +1,267 @@
+@use "global" as *;
+.p-reason {
+  margin-top: rem(60);
+}
+
+.p-reason__wrapper {
+  background-color: #d6e3f1;
+  padding-block: rem(70) rem(75);
+}
+
+.l-inner {
+}
+
+.c-title {
+}
+
+.c-title__en {
+}
+
+.c-title__ja {
+}
+
+.p-reason__item1 {
+  position: relative;
+  width: 100%;
+}
+
+.p-reason__item-left1 {
+  background-color: $white;
+  // width: rem(365);
+  width: 95%;
+  height: rem(400);
+  // margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.p-reason__item-label {
+  padding-top: rem(30);
+  display: flex;
+  gap: rem(15);
+}
+
+.p-reason__item-id {
+  font-size: rem(50);
+  font-weight: 700;
+  font-family: "Lato";
+  color: #e6eef6;
+}
+
+.p-reason__item-title {
+  font-size: rem(22);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+}
+
+.p-reason__item-text {
+  padding-inline: rem(20) rem(40);
+  padding-bottom: rem(135);
+}
+
+.p-reason__item-img1 {
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  margin-top: -20%;
+  margin-left: 10%;
+  margin-right: 0;
+}
+
+.p-reason__item-img1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.p-reason__item2 {
+  margin-top: rem(35);
+}
+
+.p-reason__item-right {
+  background-color: $white;
+  width: calc(680 / 750 * 100vw);
+  position: relative;
+  margin-inline: auto 0;
+  z-index: 1;
+}
+
+.p-reason__item-label2 {
+  display: flex;
+  gap: rem(15);
+}
+
+.p-reason__item-text2 {
+  padding: rem(15) rem(15) rem(150) rem(10);
+}
+
+.p-reason__item-img2 {
+  width: 85%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: rem(-150);
+  margin-left: rem(20);
+}
+
+.p-reason__item3 {
+  margin-top: rem(35);
+}
+
+.p-reason__item-left2 {
+  background-color: $white;
+  width: calc(700 / 750 * 100vw);
+  position: relative;
+  z-index: 1;
+}
+
+.p-reason__item-img3 {
+  width: 85%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: rem(-100);
+  margin-left: rem(40);
+}
+
+.p-reason__banner {
+  display: flex;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 375 / 200;
+  // margin-top: rem(75);
+  @include mq(md) {
+    aspect-ratio: 1440 / 380;
+  }
+}
+
+.p-reason__bg-area {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 375 / 200;
+  @include mq(md) {
+    aspect-ratio: 1440 / 500;
+  }
+}
+
+.p-reason__banner-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &:first-of-type {
+    z-index: 2;
+  }
+  &:last-of-type {
+    z-index: 1;
+  }
+}
+
+.p-reason__banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-reason__banner-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.p-reason__content {
+  z-index: 3;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: 100%;
+  text-align: center;
+  @include mq(md) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: rem(2);
+    height: rem(50);
+    background-color: $black;
+    transform: translateY(-40%) rotate(-20deg);
+    @include mq(md) {
+      top: 5%;
+      height: rem(30);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: -3%;
+    width: rem(2);
+    height: rem(50);
+    background-color: $black;
+    transform: translateY(-40%) rotate(20deg);
+    @include mq(md) {
+      top: 5%;
+      height: rem(30);
+    }
+  }
+}
+
+.p-reason__banner-text {
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  position: relative;
+  padding-inline: rem(10);
+  white-space: nowrap;
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+
+.p-reason__banner-yellow {
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  color: #f7fe2f;
+  @include mq(md) {
+    white-space: nowrap;
+    font-size: rem(26);
+  }
+}
+
+.c-button__black {
+}
+
+.p-reason__black {
+  position: relative;
+  z-index: 10;
+  display: block;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq(md) {
+    width: rem(430);
+    height: rem(75);
+    margin: 0;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.c-button__black-link {
+}
