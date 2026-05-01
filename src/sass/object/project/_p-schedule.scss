@@ -35,25 +35,28 @@
 .item-top {
   height: calc(540 / 750 * 100vw);
   @include mq(md) {
-    height: calc(145 / 1440 * 100vw);
+    height: auto;
   }
 }
 
 .date-top {
+  @include mq(md) {
+    height: auto;
+  }
 }
 
 .day-top {
   height: calc(180 / 750 * 100vw);
   padding-top: 40%;
   @include mq(md) {
-    height: calc(145 / 1440 * 100vw);
+    height: auto;
     padding-top: 20%;
   }
 }
 
 .time-top {
   @include mq(md) {
-    height: calc(145 / 1440 * 100vw);
+    height: auto;
     padding-top: 20%;
   }
 }

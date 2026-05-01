@@ -1,0 +1,222 @@
+@use "global" as *;
+.p-contact {
+}
+
+.p-contact__wrapper {
+  background-color: #2a6eae;
+  padding-block: rem(60);
+  padding-inline: rem(15);
+  @include mq(md) {
+    padding-block: rem(90);
+  }
+}
+
+.l-inner {
+}
+
+.p-contact__title {
+  color: $white;
+}
+
+.c-title {
+}
+
+.c-title__en {
+}
+
+.c-title__ja {
+}
+
+.p-contact__inner {
+  background-color: $white;
+  margin-top: rem(50);
+  margin-inline: auto;
+  padding: rem(30) rem(15);
+  box-sizing: border-box;
+  border-radius: rem(15);
+  max-width: rem(600);
+
+  @include mq(md) {
+    width: calc(1000 / 1440 * 100vw);
+    max-width: none;
+    padding-inline: rem(40);
+  }
+}
+
+.p-contact__form {
+  width: 100%;
+  margin: 0;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: rem(40); // ラベルと入力欄の間の隙間
+    row-gap: rem(25); // 行同士の隙間
+  }
+}
+
+.p-contact__form-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: rem(20);
+  @include mq(md) {
+    flex-direction: row;
+    display: contents;
+
+    &.-medium input {
+      @include mq(md) {
+        max-width: 60%;
+      }
+    }
+
+    &.-short input {
+      @include mq(md) {
+        max-width: 40%;
+      }
+    }
+  }
+}
+
+.p-contact__form-item label {
+  @include mq(md) {
+    align-self: start;
+    padding-top: rem(10);
+  }
+}
+
+.p-contact__form-item label {
+  font-weight: 700;
+  @include mq(md) {
+    grid-column: 1 / 2;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+}
+
+.p-contact__form-item span {
+  color: #da0000;
+  font-size: rem(11);
+  vertical-align: top;
+  margin-left: rem(4);
+}
+
+.p-contact__form-item input {
+  background-color: #e6eef6;
+  width: 100%;
+  box-sizing: border-box;
+  padding: rem(12);
+  margin-top: rem(2);
+  border: none;
+  border-radius: rem(4);
+  @include mq(md) {
+    grid-column: 2 / 3;
+    width: 100%;
+  }
+}
+
+::placeholder {
+  color: #a8a8a8;
+  font-size: rem(16);
+}
+
+.p-contact__form-select-wrapper {
+  @include mq(md) {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    margin-bottom: 0;
+  }
+}
+
+.p-contact__form-select-wrapper select {
+  padding: rem(10);
+  background-color: #e6eef6;
+  border: none;
+  margin-bottom: rem(20);
+  color: transparent;
+  @include mq(md) {
+    margin-bottom: 0;
+    width: auto;
+    color: $black;
+    &:invalid,
+    &:has(option[value=""]:checked) {
+      color: #a8a8a8;
+    }
+  }
+}
+
+option {
+  color: $black;
+}
+
+.p-contact__form-item textarea {
+  height: rem(105);
+  background-color: #e6eef6;
+  border: none;
+  @include mq(md) {
+    grid-column: 2 / 3;
+    width: 100%;
+  }
+}
+
+.p-contact__form-item label[for="message"] {
+  @include mq(md) {
+    grid-column: 1 / 2;
+    align-self: start;
+    padding-top: rem(10);
+  }
+}
+
+.p-contact__form-item textarea {
+  @include mq(md) {
+    grid-column: 2 / 3;
+    width: 100%;
+  }
+}
+
+.p-contact__text {
+  font-size: rem(14);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-align: center;
+  margin-top: rem(30);
+  @include mq(md) {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.p-contact__text a {
+  color: #da0000;
+  border-bottom: #da0000 solid rem(1);
+}
+
+.p-contact__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(245);
+  height: rem(50);
+  background-color: #2a6eae;
+  color: $white;
+  margin-inline: auto;
+  margin-top: rem(35);
+}
+
+.p-contact__checkbox {
+  display: none;
+  @include mq(md) {
+    display: inline-block;
+    margin-right: rem(10);
+    width: rem(16);
+    height: rem(16);
+    vertical-align: middle;
+  }
+}
+
+.p-contact__privacy {
+  cursor: pointer;
+}

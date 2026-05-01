@@ -16,7 +16,8 @@
   height: calc(470 / 750 * 100vw);
   @include mq(md) {
     flex-direction: row;
-    height: calc(125 / 1440 * 100vw);
+    height: auto;
+    min-width: rem(767);
   }
 }
 
@@ -28,7 +29,7 @@
   @include mq(md) {
     flex-direction: row;
     width: calc(280 / 1440 * 100vw);
-    height: calc(125 / 1440 * 100vw);
+    height: auto;
   }
 }
 
@@ -68,6 +69,7 @@
 }
 
 .c-schedule__content {
+  width: calc(500 / 750 * 100vw);
   @include mq(md) {
     width: calc(530 / 1440 * 100vw);
     margin-top: rem(20);
@@ -105,8 +107,12 @@
   background-color: #2a6eae;
   padding: rem(15) rem(35);
   border-radius: rem(40);
+  text-align: center;
+
   @include mq(md) {
-    padding: rem(5) rem(20);
+    padding: 0 !important;
+    width: calc(135 / 1440 * 100vw);
+    height: calc(40 / 1440 * 100vw);
   }
 }
 
@@ -120,6 +126,8 @@
   padding: rem(15) rem(55);
   border-radius: rem(40);
   @include mq(md) {
-    padding: rem(5) rem(40);
+    padding: 0;
+    width: calc(135 / 1440 * 100vw);
+    height: calc(40 / 1440 * 100vw);
   }
 }
