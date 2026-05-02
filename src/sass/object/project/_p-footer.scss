@@ -1,0 +1,249 @@
+@use "global" as *;
+.p-footer {
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}
+
+.l-inner {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.p-footer__link {
+  display: block;
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  color: #2a6eae;
+  @include mq(md) {
+    font-size: rem(28);
+  }
+}
+
+.p-footer__site-title {
+  line-height: 1;
+  @include mq(md) {
+    width: 30%;
+  }
+}
+
+.p-footer__nav {
+  padding: 0 rem(15);
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-left: auto;
+    margin-top: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    height: auto;
+    position: static;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+}
+
+.p-footer__nav-list {
+  @include mq(md) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: rem(25);
+    margin: 0;
+    height: auto;
+  }
+}
+
+.p-footer__nav-item {
+  @include mq(md) {
+    position: relative;
+    display: block;
+    height: 100%;
+    align-items: center;
+    &::after {
+      content: "";
+      display: block;
+      width: rem(1);
+      height: rem(20);
+      background-color: $white;
+      position: absolute;
+      top: 10;
+      right: rem(-5);
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.p-footer__nav-title {
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  color: #2a6eae;
+  border-bottom: 1px solid #2a6eae;
+  padding: rem(5) 0 rem(5) 0;
+  position: relative;
+  display: block;
+  @include mq(md) {
+    color: #2a6eae;
+    padding: 0;
+  }
+}
+
+.p-footer__nav-link {
+  cursor: pointer;
+  margin-top: rem(28);
+  padding-bottom: rem(7);
+  @include mq(md) {
+    display: flex;
+    gap: rem(30);
+  }
+}
+
+.p-footer__nav-title {
+  cursor: pointer;
+  margin-top: rem(20);
+}
+
+.p-footer__nav-title,
+.p-footer__nav-link {
+  display: block;
+  position: relative;
+  font-size: rem(19);
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  color: #2a6eae;
+  border-bottom: 1px solid #2a6eae;
+  cursor: pointer;
+
+  &::before {
+    // 外側の青い丸
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(20);
+    height: rem(20);
+    background-color: #2a6eae;
+    border-radius: 50%;
+    @include mq(md) {
+      // right: -15%;
+    }
+  }
+
+  &::after {
+    // 中の白い三角
+    content: "";
+    position: absolute;
+    right: rem(5);
+    top: 50%;
+    transform: translateY(-50%);
+    // 三角形の作り方
+    border-style: solid;
+    border-width: rem(5) 0 rem(5) rem(8);
+    border-color: transparent transparent transparent $white;
+    @include mq(md) {
+      right: rem(5);
+    }
+  }
+
+  @include mq(md) {
+    color: #2a6eae;
+    font-size: rem(18);
+    border-bottom: none;
+    padding: 0;
+    margin-top: 0;
+    margin-right: rem(30);
+    font-size: rem(18);
+    display: block;
+    height: rem(25);
+    width: fit-content;
+    padding-right: rem(30);
+    border-bottom: 1px solid $blue;
+  }
+}
+
+.p-footer__nav-sublist {
+  margin: rem(5) rem(10) rem(10) rem(20);
+  @include mq(md) {
+    display: block;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.sub-list__item {
+  position: relative;
+  padding: rem(15) 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); // 45度傾けて矢印にする
+
+    width: rem(8);
+    height: rem(8);
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    @include mq(md) {
+      margin-left: rem(10);
+    }
+  }
+}
+
+.sub-list__link {
+  font-size: rem(16);
+  font-weight: 400;
+  letter-spacing: 0.075em;
+  display: block;
+}
+
+.p-footer__container {
+  margin-top: rem(75);
+  text-align: center;
+}
+
+.p-footer__container a {
+  font-size: rem(11);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+.p-footer__company-link {
+  position: relative;
+  padding-right: rem(20);
+  margin-right: rem(20);
+  &::after {
+    position: absolute;
+    content: "";
+    width: rem(2);
+    height: rem(15);
+    background-color: $black;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
+
+.p-footer small {
+  display: block;
+  margin-block: rem(35) rem(25);
+  text-align: center;
+  font-size: rem(11);
+  @include mq(md) {
+    font-size: rem(12);
+  }
+}
