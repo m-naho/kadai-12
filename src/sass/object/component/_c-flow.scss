@@ -1,5 +1,8 @@
 @use "global" as *;
 .c-flow__list {
+  width: 90%;
+  max-width: rem(600);
+  margin-inline: auto;
 }
 
 .c-flow__item {

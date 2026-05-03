@@ -39,20 +39,12 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <!-- <link rel="stylesheet" href="./css/styles.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <!-- JavaScript -->
-<!--     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/styles.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/script.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
-    <script defer src="./js/script.min.js" ></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="./css/styles.min.css" />
-
-<script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-<script src="./js/script.js" defer></script>
   </head>
   <body>
     <header class="p-header">
@@ -116,6 +108,9 @@
     </header>
     <main>
       <!-- fv -->
+      <button class="p-fv__reserve-circle">
+              <a href="#" class="p-fv__circle-link">予約はこちら</a>
+            </button>
       <div class="p-fv">
         <div class="p-fv__picture">
           <picture class="p-fv__image">
@@ -137,9 +132,6 @@
         </div>
         <div class="p-fv__inner">
           <div class="p-fv__content">
-            <button class="p-fv__reserve-circle">
-              <a href="#" class="p-fv__circle-link">予約はこちら</a>
-            </button>
             <p class="p-fv__text">Start up</p>
             <div class="p-fv__body">
               <span class="p-fv__span"></span>
@@ -187,7 +179,7 @@
       </div>
       <section class="p-learn">
         <div class="l-inner">
-          <h2 class="c-title p-learn__title">
+          <h2 class="c-title p-learn__title js-fade__item">
             <span class="c-title__en" aria-hidden="true">You can learn</span>
             <span class="c-title__ja">セミナーで学べること</span>
           </h2>
@@ -278,7 +270,7 @@
         </div>
       </section>
       <section class="p-participant">
-        <h2 class="c-title p-participant__title">
+        <h2 class="c-title p-participant__title js-fade__item">
           <span class="c-title__en" aria-hidden="true">p-participant</span>
           <span class="c-title__ja p-participant__title-ja">セミナー参加者ってどんな人？</span>
         </h2>
@@ -326,7 +318,7 @@
       </div>
     </section>
     <section class="p-voice">
-      <h2 class="c-title p-voice__title">
+      <h2 class="c-title p-voice__title js-fade__item">
         <span class="c-title__en" aria-hidden="true">Voice</span>
         <span class="c-title__ja">お客さまの声</span>
       </h2>
@@ -427,14 +419,14 @@
     <section class="p-reason">
       <div class="p-reason__wrapper">
         <div class="l-inner">
-          <h2 class="c-title">
+          <h2 class="c-title js-fade__item">
             <span class="c-title__en" aria-hidden="true">Reason</span>
             <span class="c-title__ja">私たちが選ばれる理由</span>
             </h2>
         </div>
         <div class="p-reason__item1">
           <div class="p-reason__item-left1">
-            <div class="p-reason__item-label">
+            <div class="p-reason__item-label js-fade__left">
               <span class="p-reason__item-id">01</span>
               <h3 class="p-reason__item-title">営業電話しない！  <br>紹介・リピート率で運用</h3>
             </div>
@@ -446,7 +438,7 @@
         </div>
         <div class="p-reason__item2">
           <div class="p-reason__item-right">
-            <div class="p-reason__item-label2">
+            <div class="p-reason__item-label2 js-fade__right">
               <span class="p-reason__item-id">02</span>
             <h3 class="p-reason__item-title">業界No,1！<br>
           99%以上をこえる<br class="u-mobile-br">入居率！</h3>
@@ -459,7 +451,7 @@
         </div>
         <div class="p-reason__item3">
           <div class="p-reason__item-left2">
-            <div class="p-reason__item-label">
+            <div class="p-reason__item-label js-fade__left">
               <span class="p-reason__item-id">03</span>
               <h3 class="p-reason__item-title">販売だけじゃない！<br>開発から管理まで<br class="u-mobile-br">ワンストップ提供</h3>
             </div>
@@ -514,12 +506,12 @@
     </section>
     <section class="p-flow">
       <div class="p-flow__inner">
-        <h2 class="c-title">
+        <h2 class="c-title js-fade__item">
           <span class="c-title__en" aria-hidden="true">Flow</span>
           <span class="c-title__ja">セミナー受講までの流れ</span>
         </h2>
         <ul class="c-flow__list">
-          <li class="c-flow__item">
+          <li class="c-flow__item js-fade__item">
             <div class="c-flow__icon">
               <div class="c-flow__icon-base">
                 <div class="c-flow__icon-img">
@@ -534,7 +526,7 @@
             </p>
           </div>
         </li>
-        <li class="c-flow__item">
+        <li class="c-flow__item js-fade__item">
             <div class="c-flow__icon">
               <div class="c-flow__icon-base">
                 <div class="c-flow__icon-img">
@@ -549,7 +541,7 @@
             </p>
           </div>
         </li>
-        <li class="c-flow__item">
+        <li class="c-flow__item js-fade__item">
             <div class="c-flow__icon">
               <div class="c-flow__icon-base">
                 <div class="c-flow__icon-img">
@@ -564,7 +556,7 @@
             </p>
           </div>
         </li>
-        <li class="c-flow__item">
+        <li class="c-flow__item js-fade__item">
             <div class="c-flow__icon">
               <div class="c-flow__icon-base">
                 <div class="c-flow__icon-img">
@@ -579,7 +571,7 @@
             </p>
           </div>
         </li>
-        <li class="c-flow__item">
+        <li class="c-flow__item js-fade__item">
             <div class="c-flow__icon">
               <div class="c-flow__icon-base">
                 <div class="c-flow__icon-img">
@@ -600,9 +592,9 @@
     <section class="p-schedule">
       <div class="p-schedule__wrapper">
         <div class="l-inner">
-          <h2 class="c-title">
+          <h2 class="c-title js-fade__item">
             <span class="c-title__en" aria-hidden="true">Schedule</span>
-            <span class="c-title__ja">無料セミナースケジュール</span>
+            <span class="c-title__ja p-schedule__title">無料セミナースケジュール</span>
           </h2>
         </div>
         <div class="p-schedule__inner">
@@ -728,7 +720,7 @@
     <section class="p-contact">
       <div class="p-contact__wrapper">
         <div class="l-inner">
-          <h2 class="c-title">
+          <h2 class="c-title js-fade__item">
             <span class="c-title__en p-contact__title" aria-hidden="true">Contact</span>
             <span class="c-title__ja p-contact__title">お申し込みはこちら</span>
           </h2>

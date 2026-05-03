@@ -115,8 +115,11 @@
 }
 
 ::placeholder {
-  color: #a8a8a8;
-  font-size: rem(16);
+  color: transparent;
+  @include mq(md) {
+    color: #a8a8a8;
+    font-size: rem(16);
+  }
 }
 
 .p-contact__form-select-wrapper {
@@ -204,6 +207,10 @@ option {
   color: $white;
   margin-inline: auto;
   margin-top: rem(35);
+  @include mq(md) {
+    width: rem(380);
+    height: rem(70);
+  }
 }
 
 .p-contact__checkbox {

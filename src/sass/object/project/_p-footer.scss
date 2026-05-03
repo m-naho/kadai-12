@@ -14,7 +14,7 @@
 
 .p-footer__link {
   display: block;
-  font-size: rem(18);
+  font-size: rem(28);
   font-weight: 700;
   letter-spacing: 0.075em;
   color: #2a6eae;
@@ -211,12 +211,12 @@
 }
 
 .p-footer__container {
-  margin-top: rem(75);
+  margin-top: rem(35);
   text-align: center;
 }
 
 .p-footer__container a {
-  font-size: rem(11);
+  font-size: rem(14);
   @include mq(md) {
     font-size: rem(16);
   }

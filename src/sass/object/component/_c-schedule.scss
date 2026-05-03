@@ -3,38 +3,45 @@
   display: flex;
   flex-direction: column;
   gap: rem(30);
-  width: calc(690 / 750 * 100vw);
+  width: 90%;
+  margin-inline: auto;
   @include mq(md) {
     gap: rem(10);
+    width: 70%;
   }
 }
 
 .c-schedule__item {
   background-color: #e6eef6;
   display: flex;
-  flex-wrap: wrap;
-  height: calc(470 / 750 * 100vw);
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  // max-width: rem(500);
+  max-width: none;
+  margin-inline: auto;
   @include mq(md) {
     flex-direction: row;
     height: auto;
+    max-width: none;
+    width: 100%;
     min-width: rem(767);
   }
 }
 
 .c-schedule__date {
-  width: calc(170 / 750 * 100vw);
+  width: 25%;
   display: flex;
   flex-direction: column;
   gap: rem(2);
   @include mq(md) {
     flex-direction: row;
-    width: calc(280 / 1440 * 100vw);
     height: auto;
   }
 }
 
 .c-schedule__day {
-  height: calc(110 / 750 * 100vw);
+  height: 40%;
   font-size: rem(16);
   font-weight: 700;
   display: block;
@@ -50,7 +57,7 @@
 }
 
 .c-schedule__time {
-  height: calc(190 / 750 * 100vw);
+  height: 60%;
   font-size: rem(16);
   font-weight: 700;
   display: block;
@@ -69,7 +76,7 @@
 }
 
 .c-schedule__content {
-  width: calc(500 / 750 * 100vw);
+  width: 75%;
   @include mq(md) {
     width: calc(530 / 1440 * 100vw);
     margin-top: rem(20);
@@ -96,18 +103,20 @@
     gap: rem(10);
     width: calc(135 / 1440 * 100vw);
     margin: auto 0 auto rem(20);
+    justify-content: end;
   }
 }
 
 .c-schedule__btn-blue {
   font-size: rem(16);
   letter-spacing: 0.075em;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: $white;
   background-color: #2a6eae;
   padding: rem(15) rem(35);
   border-radius: rem(40);
-  text-align: center;
 
   @include mq(md) {
     padding: 0 !important;
@@ -119,10 +128,11 @@
 .c-schedule__btn-black {
   font-size: rem(16);
   letter-spacing: 0.075em;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: $white;
   background-color: $black;
-  text-align: center;
   padding: rem(15) rem(55);
   border-radius: rem(40);
   @include mq(md) {

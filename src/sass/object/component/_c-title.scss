@@ -4,6 +4,8 @@
   flex-direction: column;
   text-align: center;
   margin-bottom: rem(27);
+  align-items: center;
+  width: 100%;
 }
 
 .c-title__en {
@@ -20,8 +22,30 @@
 .c-title__ja {
   font-size: rem(24);
   font-weight: 700;
-  letter-spacing: 0.075em;
   @include mq(md) {
     font-size: rem(42);
+  }
+}
+
+.js-fade__item {
+  opacity: 0;
+  transform: translateY(20px);
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+.js-fade__item.is-intersecting {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-animation: scroll-blur 0.4s 0.2s forwards;
+  animation: scroll-blur 0.4s 0.2s forwards;
+}
+@-webkit-keyframes scroll-blur {
+  100% {
+    translate: 0 0;
+  }
+}
+@keyframes scroll-blur {
+  100% {
+    translate: 0 0;
   }
 }

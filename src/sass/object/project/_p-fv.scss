@@ -69,17 +69,30 @@
   letter-spacing: 0.075em;
   border: rem(2) solid $white;
   border-radius: calc(40 / 750 * 100vw);
-  position: fixed;
-  top: calc(130 / 750 * 100vw);
-  right: calc(35 / 750 * 100vw);
-  // display: none;
+  top: rem(70);
+  right: 8%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  position: fixed !important;
+  z-index: 90;
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
   @include mq(md) {
+    position: fixed;
     width: rem(230);
     height: rem(55);
     font-size: rem(20);
     border-radius: rem(25);
     top: rem(90);
-    right: rem(10);
+    right: rem(60);
   }
 }
 
@@ -93,7 +106,8 @@
     // 外側の丸
     content: "";
     position: absolute;
-    right: calc(-10 / 750 * 100vw);
+    // right: calc(-10 / 750 * 100vw);
+    right: -2%;
     top: 50%;
     transform: translateY(-50%);
     width: calc(30 / 750 * 100vw);
@@ -111,7 +125,7 @@
     // 中の三角
     content: "";
     position: absolute;
-    right: 0;
+    right: 2%;
     top: 50%;
     transform: translateY(-50%);
     // 三角形の作り方
@@ -136,7 +150,7 @@
   transform: rotate(-15deg);
   @include mq(md) {
     font-size: 7vw;
-    top: rem(150);
+    top: rem(200);
     right: rem(35);
   }
 }
@@ -191,27 +205,17 @@
 }
 
 .p-fv__sub-title {
-  // font-size: calc(38 / 750 * 100vw);
   font-size: clamp(rem(18), calc(38 / 750 * 100vw), rem(38));
   font-weight: 700;
   letter-spacing: 0.075em;
   color: $blue;
-  // @include mq(md) {
-  //   // font-size: rem(38);
-  // }
 }
 
 .p-fv__main-title {
-  // font-size: calc(68 / 750 * 100vw);
   font-size: clamp(rem(34), calc(68 / 750 * 100vw), rem(68));
   font-weight: 700;
   letter-spacing: 0.075em;
   width: auto;
-  // white-space: nowrap;
-  //   @include mq(md) {
-  //     // font-size: rem(68);
-  //   }
-  //
 }
 
 .p-fv__feature-list {
@@ -228,15 +232,6 @@
   }
 }
 
-.p-fv__feature-item {
-}
-
-.p-fv__feature-bg {
-}
-
-.p-fv__feature-text {
-}
-
 .p-fv__reserve-square {
   width: calc(195 / 750 * 100vw);
   height: calc(156 / 750 * 100vw);
@@ -250,10 +245,19 @@
   position: absolute;
   bottom: calc(74 / 750 * 100vw);
   right: calc(6 / 750 * 100vw);
+
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
   @include mq(md) {
     width: rem(210);
     height: rem(170);
-    top: 57%;
+    top: rem(450);
     right: 1%;
     box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.3);
   }
@@ -324,8 +328,6 @@
   width: calc(480 / 750 * 100vw);
   height: calc(100 / 750 * 100vw);
   @include mq(md) {
-    // margin: rem(45) auto 0;
-    // top: 0;
     width: rem(420);
     height: rem(75);
   }

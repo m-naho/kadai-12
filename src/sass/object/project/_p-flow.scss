@@ -4,7 +4,10 @@
 }
 
 .p-flow__inner {
-  width: 100%;
+  margin-inline: auto;
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .c-title {
