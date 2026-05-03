@@ -14,34 +14,38 @@
 .c-schedule__item {
   background-color: #e6eef6;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  // max-width: rem(500);
-  max-width: none;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 100%;
   margin-inline: auto;
   @include mq(md) {
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
     height: auto;
     max-width: none;
     width: 100%;
     min-width: rem(767);
+    // padding-bottom: rem(20);
   }
 }
 
 .c-schedule__date {
   width: 25%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: rem(2);
   @include mq(md) {
     flex-direction: row;
-    height: auto;
+    height: 100%;
   }
 }
 
 .c-schedule__day {
-  height: 40%;
+  height: auto;
+  flex: 1;
   font-size: rem(16);
   font-weight: 700;
   display: block;
@@ -49,7 +53,7 @@
   background-color: #2a6eae;
   padding-inline: rem(10);
   text-align: center;
-  padding-top: 20%;
+  padding-block: 20%;
   @include mq(md) {
     width: 50%;
     height: 100%;
@@ -57,7 +61,8 @@
 }
 
 .c-schedule__time {
-  height: 60%;
+  height: auto;
+  flex: 1;
   font-size: rem(16);
   font-weight: 700;
   display: block;
@@ -79,7 +84,7 @@
   width: 75%;
   @include mq(md) {
     width: calc(530 / 1440 * 100vw);
-    margin-top: rem(20);
+    margin-block: rem(10);
   }
 }
 
@@ -103,7 +108,6 @@
     gap: rem(10);
     width: calc(135 / 1440 * 100vw);
     margin: auto 0 auto rem(20);
-    justify-content: end;
   }
 }
 

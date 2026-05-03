@@ -36,7 +36,7 @@
   }
 }
 
-.item-top {
+.c-schedule__item:first-child {
   height: auto;
   max-width: rem(500);
   @include mq(md) {
@@ -45,14 +45,14 @@
   }
 }
 
-.date-top {
+.c-schedule__date:first-child {
   width: 25%;
   @include mq(md) {
     height: auto;
   }
 }
 
-.day-top {
+.c-schedule__day:first-child {
   height: 50%;
   padding-top: 20%;
 
