@@ -1,6 +1,9 @@
 @use "global" as *;
 .p-flow {
   margin-top: rem(75);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
 }
 
 .p-flow__inner {
@@ -20,15 +23,7 @@
 }
 
 .c-flow__list {
-  display: flex;
-  flex-direction: column;
-  gap: rem(35);
-  @include mq(md) {
-    flex-direction: row;
-    width: 80%;
-    max-width: rem(1500);
-    margin: 0 auto;
-  }
+ 
 }
 
 .c-flow__item {

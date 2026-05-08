@@ -44,7 +44,6 @@ window.addEventListener("DOMContentLoaded", () => {
       $("body").removeClass("is-fixed");
     });
 
-    // Swiperの初期化
     if ($(".js-swiper").length > 0) {
       const swiper = new Swiper(".js-swiper", {
         loop: true,
@@ -60,13 +59,11 @@ window.addEventListener("DOMContentLoaded", () => {
         breakpoints: {
           490: { slidesPerView: 2.5 },
           630: { slidesPerView: 2.9 },
-          768: { slidesPerView: 4.8 },
+          768: { slidesPerView: 4.5 },
         },
       });
     }
-  }); // jQueryここまで
-
-  // --- ここから IntersectionObserver (jQueryの外に出すのが安全です) ---
+  });
   const fadeOption = {
     root: null,
     rootMargin: "0px 0px -10% 0px",

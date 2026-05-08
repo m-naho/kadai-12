@@ -22,12 +22,17 @@
     &.is-color-change {
       background-image: none;
       background-color: $white;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); // 白背景だと境目が見えにくいので少し影をつけると◎
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 
       .p-header__link,
       .p-header__nav-title,
       .p-header__nav-link {
         color: #2a6eae;
+      }
+
+      .p-header__nav-item::after,
+      .p-header__nav-link::after {
+        background-color: #2a6eae;
       }
     }
   }
@@ -49,6 +54,10 @@
 
 .p-header__site-title {
   line-height: 1;
+  @include mq(md) {
+    margin-left: rem(100);
+    
+  }
 }
 
 .p-header__link {
@@ -122,6 +131,7 @@
 
   @include mq(md) {
     position: static;
+    overflow: visible;
     transform: none;
     width: auto;
     height: auto;
@@ -202,6 +212,8 @@
   padding: rem(5) 0 rem(5) 0;
   position: relative;
   display: block;
+  cursor: pointer;
+  top: 100%;
 }
 
 .p-header__nav-link {
@@ -214,11 +226,6 @@
   }
 }
 
-.p-header__nav-title {
-  cursor: pointer;
-  margin-top: rem(20);
-}
-
 .p-header__nav-title,
 .p-header__nav-link {
   display: block;
@@ -226,6 +233,7 @@
   font-size: rem(19);
   font-weight: 700;
   letter-spacing: 0.075em;
+  padding: rem(30) rem(10);
   color: #2a6eae;
   border-bottom: 1px solid #2a6eae;
   cursor: pointer;
@@ -260,11 +268,10 @@
     color: $white;
     font-size: rem(18);
     border-bottom: none;
-    padding: 0;
     margin-top: 0;
     font-size: rem(18);
     display: block;
-    height: rem(25);
+    padding-block: rem(20) rem(10);
     padding-inline: clamp(rem(5), 1vw, rem(15));
 
     &:hover {
@@ -283,7 +290,35 @@
 .p-header__nav-sublist {
   margin: rem(5) rem(10) rem(10) rem(20);
   @include mq(md) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 200;
+    padding: rem(20) rem(30);
+    background-color: $white;
+    box-shadow: rem(1) rem(1) 0 0;
     display: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(-15);
+      left: 0;
+      width: 100%;
+      height: rem(15);
+      display: block;
+      background: transparent;
+    }
+  }
+}
+
+.p-header__nav-item {
+  @include mq(md) {
+    &:hover {
+      .p-header__nav-sublist {
+        display: block;
+      }
+    }
   }
 }
 
@@ -291,17 +326,27 @@
   position: relative;
   padding: rem(15) 0;
 
-  &::after {
-    content: "";
-    position: absolute;
-    right: 3%;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg); // 45度傾けて矢印にする
+  @include mq(md) {
+    &:hover {
+      border-bottom: 1px solid $blue;
+    }
 
-    width: rem(8);
-    height: rem(8);
-    border-top: 1px solid #333;
-    border-right: 1px solid #333;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 3%;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+
+      width: rem(8);
+      height: rem(8);
+      border-top: 1px solid #333;
+      border-right: 1px solid #333;
+
+      @include mq(md) {
+        right: -15%;
+      }
+    }
   }
 }
 
