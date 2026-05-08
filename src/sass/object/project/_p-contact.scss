@@ -39,7 +39,8 @@
   @include mq(md) {
     width: calc(1000 / 1440 * 100vw);
     max-width: none;
-    padding-inline: rem(40);
+    margin-top: rem(30);
+    padding: rem(70) rem(45) rem(55) rem(50);
   }
 }
 
@@ -49,8 +50,8 @@
   @include mq(md) {
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: rem(40); // ラベルと入力欄の間の隙間
-    row-gap: rem(25); // 行同士の隙間
+    column-gap: rem(25); // ラベルと入力欄の間の隙間
+    row-gap: rem(10); // 行同士の隙間
   }
 }
 
@@ -59,19 +60,20 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: rem(20);
+  letter-spacing: 0.075em;
   @include mq(md) {
     flex-direction: row;
     display: contents;
 
     &.-medium input {
       @include mq(md) {
-        max-width: 60%;
+        max-width: 58%;
       }
     }
 
     &.-short input {
       @include mq(md) {
-        max-width: 40%;
+        max-width: 35%;
       }
     }
   }
@@ -81,6 +83,7 @@
   @include mq(md) {
     align-self: start;
     padding-top: rem(10);
+    font-size: rem(18);
   }
 }
 
@@ -127,9 +130,23 @@
     grid-column: 2 / 3;
     display: flex;
     align-items: center;
-    gap: rem(10);
-    margin-bottom: 0;
+    gap: rem(25);
+    margin-bottom: rem(5);
   }
+}
+
+.p-contact__form-select-wrapper span {
+  @include mq(md) {
+    margin-left: rem(-10);
+  }
+}
+
+#year {
+  width: rem(120);
+}
+
+#month {
+  width: rem(60);
 }
 
 .p-contact__form-select-wrapper select {
@@ -138,6 +155,12 @@
   border: none;
   margin-bottom: rem(20);
   color: transparent;
+
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: rem(25);
+  background-position: right rem(8) center;
   @include mq(md) {
     margin-bottom: 0;
     width: auto;
@@ -160,6 +183,8 @@ option {
   @include mq(md) {
     grid-column: 2 / 3;
     width: 100%;
+    height: rem(150);
+    padding: rem(15) 0 0 rem(20);
   }
 }
 
@@ -171,13 +196,6 @@ option {
   }
 }
 
-.p-contact__form-item textarea {
-  @include mq(md) {
-    grid-column: 2 / 3;
-    width: 100%;
-  }
-}
-
 .p-contact__text {
   font-size: rem(14);
   font-weight: 700;
@@ -185,16 +203,27 @@ option {
   text-align: center;
   margin-top: rem(30);
   @include mq(md) {
+    font-size: rem(16);
     text-align: left;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    margin-top: rem(40);
+    margin-left: 18%;
   }
+}
+
+.p-contact__privacy {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .p-contact__text a {
   color: #da0000;
-  border-bottom: #da0000 solid rem(1);
+  // border-bottom: #da0000 solid rem(1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .p-contact__link {
@@ -217,13 +246,9 @@ option {
   display: none;
   @include mq(md) {
     display: inline-block;
-    margin-right: rem(10);
+    margin-inline: rem(20) rem(10);
     width: rem(16);
     height: rem(16);
     vertical-align: middle;
   }
-}
-
-.p-contact__privacy {
-  cursor: pointer;
 }

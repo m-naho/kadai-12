@@ -2,7 +2,7 @@
 .p-schedule {
   margin-top: rem(35);
   @include mq(md) {
-    margin-top: rem(110);
+    margin-top: rem(10);
   }
 }
 
@@ -15,6 +15,9 @@
 .p-schedule__wrapper {
   background-color: #f6f6f6;
   padding-block: rem(70) rem(60);
+  @include mq(md) {
+    padding-inline: rem(110) rem(100);
+  }
 }
 
 .p-schedule__inner {
@@ -32,7 +35,7 @@
 
 .p-schedule__list {
   @include mq(md) {
-    margin-top: rem(20);
+    margin-block: rem(20) rem(40);
   }
 }
 
@@ -52,19 +55,10 @@
   }
 }
 
-.c-schedule__day:first-child {
-  height: 50%;
-  padding-top: 20%;
-
+.c-schedule__item:first-child .c-schedule__day {
+  padding-block: rem(30);
   @include mq(md) {
     height: auto;
-    padding-top: 20%;
-  }
-}
-
-.time-top {
-  @include mq(md) {
-    height: auto;
-    padding-top: 20%;
+    padding-top: rem(20);
   }
 }

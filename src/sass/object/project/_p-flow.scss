@@ -2,7 +2,7 @@
 .p-flow {
   margin-top: rem(75);
   @include mq(md) {
-    margin-top: rem(60);
+    margin-block: rem(60) rem(110);
   }
 }
 
@@ -23,7 +23,6 @@
 }
 
 .c-flow__list {
- 
 }
 
 .c-flow__item {

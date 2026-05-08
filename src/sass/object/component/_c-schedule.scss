@@ -3,11 +3,12 @@
   display: flex;
   flex-direction: column;
   gap: rem(30);
-  width: 90%;
+  width: 95%;
   margin-inline: auto;
   @include mq(md) {
     gap: rem(10);
-    width: 70%;
+    width: 80%;
+    max-width: rem(1000);
   }
 }
 
@@ -21,13 +22,13 @@
   @include mq(md) {
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: rem(2);
     justify-content: space-between;
     align-items: stretch;
     height: auto;
     max-width: none;
     width: 100%;
     min-width: rem(767);
-    // padding-bottom: rem(20);
   }
 }
 
@@ -39,6 +40,7 @@
   gap: rem(2);
   @include mq(md) {
     flex-direction: row;
+    width: 35%;
     height: 100%;
   }
 }
@@ -53,10 +55,11 @@
   background-color: #2a6eae;
   padding-inline: rem(10);
   text-align: center;
-  padding-block: 20%;
+  padding-block: rem(15);
   @include mq(md) {
     width: 50%;
     height: 100%;
+    padding-top: rem(20);
   }
 }
 
@@ -68,7 +71,7 @@
   display: block;
   color: $white;
   background-color: #6096c8;
-  padding: rem(40) rem(10);
+  padding: rem(30) rem(10);
   display: flex;
   justify-content: center;
   text-align: left;
@@ -76,7 +79,7 @@
   @include mq(md) {
     width: 50%;
     height: 100%;
-    padding-top: 15%;
+    padding-top: rem(20);
   }
 }
 
@@ -84,14 +87,18 @@
   width: 75%;
   @include mq(md) {
     width: calc(530 / 1440 * 100vw);
-    margin-block: rem(10);
+    margin-block: rem(10) rem(20);
   }
 }
 
 .c-schedule__title {
+  font-size: rem(14);
   line-height: calc(20 / 16);
   letter-spacing: 0.075em;
-  margin: rem(5) 0 rem(10) rem(10);
+  margin: rem(10) rem(10) rem(10) rem(10);
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .c-schedule__text {
@@ -107,7 +114,7 @@
     flex-direction: column;
     gap: rem(10);
     width: calc(135 / 1440 * 100vw);
-    margin: auto 0 auto rem(20);
+    margin: auto rem(30) auto rem(20);
   }
 }
 
@@ -119,7 +126,7 @@
   justify-content: center;
   color: $white;
   background-color: #2a6eae;
-  padding: rem(15) rem(35);
+  padding: rem(10) rem(35);
   border-radius: rem(40);
 
   @include mq(md) {
@@ -137,7 +144,7 @@
   justify-content: center;
   color: $white;
   background-color: $black;
-  padding: rem(15) rem(55);
+  padding: rem(10) rem(55);
   border-radius: rem(40);
   @include mq(md) {
     padding: 0;

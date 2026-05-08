@@ -278,7 +278,7 @@
   font-weight: 700;
   color: $white;
   position: relative;
-  padding-right: calc(30 / 750 * 100vw);
+  padding-right: rem(20);
   @include mq(md) {
     font-size: rem(20);
     margin-bottom: rem(20);
@@ -306,7 +306,7 @@
     // 中の三角
     content: "";
     position: absolute;
-    right: calc(6 / 750 * 100vw);
+    right: rem(1);
     top: 50%;
     transform: translateY(-50%);
     // 三角形の作り方
@@ -314,8 +314,8 @@
     border-width: rem(6) 0 rem(6) rem(8);
     border-color: transparent transparent transparent $orange;
     @include mq(md) {
-      right: -2%;
-      border-width: rem(6) 0 rem(6) rem(8);
+      right: rem(-5);
+      border-width: rem(8) 0 rem(8) rem(10);
     }
   }
 }
