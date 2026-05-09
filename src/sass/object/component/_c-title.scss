@@ -22,7 +22,7 @@
 .c-title__ja {
   font-size: rem(24);
   font-weight: 700;
-  letter-spacing: 0.075em;
+  // letter-spacing: 0.075em;
   @include mq(md) {
     font-size: rem(42);
   }

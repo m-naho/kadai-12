@@ -1,6 +1,9 @@
 @use "global" as *;
 .p-learn {
   margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(90);
+  }
 }
 
 .c-title {
@@ -226,12 +229,13 @@
 .p-learn__content {
   z-index: 3;
   position: absolute;
-  top: 30%;
+  top: 23%;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
   text-align: center;
   @include mq(md) {
+    top: 32%;
     display: flex;
     flex-direction: row;
   }
@@ -271,7 +275,7 @@
 .p-learn__banner-text {
   font-size: rem(16);
   font-weight: 700;
-  letter-spacing: 0.075em;
+  // letter-spacing: 0.075em;
   position: relative;
   padding-inline: rem(10);
   white-space: nowrap;
@@ -284,7 +288,7 @@
 .p-learn__banner-yellow {
   font-size: rem(19);
   font-weight: 700;
-  letter-spacing: 0.075em;
+  // letter-spacing: 0.075em;
   color: #f7fe2f;
   @include mq(md) {
     white-space: nowrap;
@@ -296,7 +300,7 @@
   position: relative;
   z-index: 10;
   display: block;
-  top: 60%;
+  top: 52%;
   left: 50%;
   transform: translateX(-50%);
   @include mq(md) {

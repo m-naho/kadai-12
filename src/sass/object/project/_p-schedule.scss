@@ -14,7 +14,7 @@
 
 .p-schedule__wrapper {
   background-color: #f6f6f6;
-  padding-block: rem(70) rem(60);
+  padding-block: rem(55) rem(60);
   @include mq(md) {
     padding-inline: rem(110) rem(100);
   }
@@ -34,14 +34,16 @@
 }
 
 .p-schedule__list {
+  max-width: rem(500);
   @include mq(md) {
+    max-width: none;
     margin-block: rem(20) rem(40);
   }
 }
 
 .c-schedule__item:first-child {
   height: auto;
-  max-width: rem(500);
+
   @include mq(md) {
     max-width: none;
     height: auto;

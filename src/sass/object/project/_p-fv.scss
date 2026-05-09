@@ -220,7 +220,7 @@
 
 .p-fv__feature-list {
   position: relative;
-  top: auto;
+  top: rem(12);
   left: auto;
   display: flex;
   justify-content: center;
@@ -306,12 +306,12 @@
     // 中の三角
     content: "";
     position: absolute;
-    right: rem(1);
+    right: rem(3);
     top: 50%;
     transform: translateY(-50%);
     // 三角形の作り方
     border-style: solid;
-    border-width: rem(6) 0 rem(6) rem(8);
+    border-width: rem(4) 0 rem(4) rem(6);
     border-color: transparent transparent transparent $orange;
     @include mq(md) {
       right: rem(-5);

@@ -1,6 +1,9 @@
 @use "global" as *;
 .p-voice {
-  margin-top: rem(75);
+  margin-top: rem(45);
+  @include mq(md) {
+    margin-top: rem(75);
+  }
 }
 
 .c-title {

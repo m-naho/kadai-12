@@ -28,7 +28,6 @@
     height: auto;
     max-width: none;
     width: 100%;
-    min-width: rem(767);
   }
 }
 
@@ -86,7 +85,7 @@
 .c-schedule__content {
   width: 75%;
   @include mq(md) {
-    width: calc(530 / 1440 * 100vw);
+    width: rem(530);
     margin-block: rem(10) rem(20);
   }
 }

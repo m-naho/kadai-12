@@ -1,6 +1,6 @@
 @use "global" as *;
 .p-flow {
-  margin-top: rem(75);
+  margin-block: rem(75) rem(7);
   @include mq(md) {
     margin-block: rem(60) rem(110);
   }
